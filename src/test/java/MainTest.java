@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -6,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 class FizzBuzzTest {
-
     @Test
     public void fizzTest(){
         FizzBuzz fizz= new FizzBuzz();
@@ -29,6 +29,6 @@ class FizzBuzzTest {
     @Test
     public void nullTest(){
         FizzBuzz fizzBuzz=new FizzBuzz();
-        assertThrows(NullPointerException.class,() -> fizzBuzz.fizzBuzzString(null));
+        assertThrows(IllegalArgumentException.class,() -> fizzBuzz.fizzBuzzString(null));
     }
 }
