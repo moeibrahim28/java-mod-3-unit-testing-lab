@@ -1,5 +1,3 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,6 +22,12 @@ class FizzBuzzTest {
     public void fizzBuzzTest(){
         FizzBuzz fizzBuzz=new FizzBuzz();
         assertEquals("FizzBuzz", fizzBuzz.fizzBuzzString("flab"), "Printed fizzBuzz");
+    }
+
+    @Test
+    public void nonFizzBuzzWordTest(){
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        assertEquals("clear", fizzBuzz.fizzBuzzString("clear"), "Printed same word back");
     }
 
     @Test
